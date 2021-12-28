@@ -3,6 +3,12 @@ const App = {
     return {
       myPlaceholder: 'Введите название заметки',
       title: 'Список заметок',
+      inputValue: '',
+    }
+  },
+  methods: {
+    inputChangeHanlder(e) {
+      this.inputValue = e.target.value;
     }
   }
 }
