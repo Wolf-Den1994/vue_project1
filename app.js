@@ -4,7 +4,7 @@ const App = {
       myPlaceholder: 'Введите название заметки',
       title: 'Список заметок',
       inputValue: '',
-      notes: ['zametka 1', 'заметка 2', 'заметочка 100500']
+      notes: ['zametka 1', 'заметка 2']
     }
   },
   methods: {
@@ -16,10 +16,6 @@ const App = {
         this.notes.push(this.inputValue);
         this.inputValue = '';
       }
-    },
-    doubleCount() {
-      console.log('doubleCount')
-      return this.notes.length * 2;
     },
     toUpperCase(item) {
       return item.toUpperCase();
@@ -33,6 +29,13 @@ const App = {
       console.log('doubleCountComputed')
       return this.notes.length * 2;
     },
+  },
+  watch: {
+    inputValue(value) {
+      if (value.length > 10) {
+        this.inputValue = ''
+      }
+    }
   }
 }
 
