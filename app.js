@@ -17,12 +17,22 @@ const App = {
         this.inputValue = '';
       }
     },
+    doubleCount() {
+      console.log('doubleCount')
+      return this.notes.length * 2;
+    },
     toUpperCase(item) {
       return item.toUpperCase();
     },
     removeNote(idx) {
       this.notes.splice(idx, 1);
     }
+  },
+  computed: {
+    doubleCountComputed() {
+      console.log('doubleCountComputed')
+      return this.notes.length * 2;
+    },
   }
 }
 
