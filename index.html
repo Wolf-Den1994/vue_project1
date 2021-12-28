@@ -19,7 +19,7 @@
           v-on:input="inputChangeHanlder"
         />
       </div>
-      <button class="btn">Добавить</button>
+      <button class="btn" v-on:click="addNewNote">Добавить</button>
       <hr>
       <ul class="list">
         <li class="list-item" v-for="myNote in notes">
